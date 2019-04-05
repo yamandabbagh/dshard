@@ -18,12 +18,12 @@ var (
 // NodeCmd represents the node command
 var DshardCmd = &cobra.Command{
 	Use:   "dshard",
-	Short: "Deal with nodes of IoTeX blockchain",
+	Short: "Find the weak shard in the system",
 	Args:  cobra.ExactArgs(1),
 }
 
 func init() {
-	DshardCmd.AddCommand(nodeDelegateCmd)
+	DshardCmd.AddCommand(dnodeDelegateCmd)
 	DshardCmd.AddCommand(dnodeRewardCmd)
-	nodeDelegateCmd.Flags().Uint64VarP(&epochNum, "epoch-num", "e", 0, "specify specific epoch")
+	dnodeDelegateCmd.Flags().Uint64VarP(&epochNum, "epoch-num", "e", 0, "specify specific epoch")
 }

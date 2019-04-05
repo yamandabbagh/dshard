@@ -22,16 +22,16 @@ import (
 )
 
 // nodeDelegateCmd represents the node delegate command
-var nodeDelegateCmd = &cobra.Command{
-	Use:   "delegate",
+var dnodeDelegateCmd = &cobra.Command{
+	Use:   "ddelegate",
 	Short: "print consensus delegates information in certain epoch",
 	Args:  cobra.MaximumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(delegate())
+		fmt.Println(ddelegate())
 	},
 }
 
-func delegate() string {
+func ddelegate() string {
 	status := map[bool]string{true: "active", false: ""}
 	if epochNum == 0 {
 		chainMeta, err := bc.GetChainMeta()
@@ -40,6 +40,7 @@ func delegate() string {
 		}
 		epochNum = chainMeta.Epoch.Num
 	}
+	/* 
 	conn, err := util.ConnectToEndpoint()
 	if err != nil {
 		return err.Error()
@@ -82,6 +83,8 @@ func delegate() string {
 		lines = append(lines, fmt.Sprintf(formatDataString, bp.Address, index+1,
 			aliases[bp.Address], status[bp.Active], production,
 			util.RauToString(votes, util.IotxDecimalNum)))
-	}
-	return strings.Join(lines, "\n")
+	}*/
+	//return strings.Join(lines, "\n")
+	return fmt.Sprintf("epocho; %d", epochNum)
+
 }
