@@ -26,6 +26,7 @@ specific release so install-cli.sh can download them.
       node        Deal with nodes of IoTeX blockchain
       update      Update ioctl with latest version
       version     Print the version of ioctl and node
+      dshard	  Enables dynamic sharding
 
     Flags:
       -h, --help   help for ioctl
