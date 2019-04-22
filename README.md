@@ -1,4 +1,4 @@
-# dynamic-sharding
+# DShard
 This is a dynamic sharding implementation using the IoTeX protocol.
 
 ## Motivation
