@@ -6,6 +6,3 @@ But first why do we need blockchain for the IoT? The current IoT systems face 3 
 
 ## Technical Details
 <a href="https://ibb.co/Wnfx7jt"><img src="https://i.ibb.co/hsV7rwf/Picture1.png" alt="Picture1" border="0"></a><br /><br />
-### Algorithm
-
-## Training Data
